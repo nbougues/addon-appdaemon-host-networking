@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:18.2.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:20.1.1
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -16,13 +16,13 @@ COPY rootfs/patches /patches
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        python3-dev=3.12.12-r0 \
+        python3-dev=3.12.13-r0 \
     \
     && apk add --no-cache \
-        py3-pip=25.1.1-r0 \
-        py3-wheel=0.46.1-r0 \
-        python3=3.12.12-r0 \
-        yq-go=4.47.2-r1 \
+        py3-pip=25.1.1-r1 \
+        py3-wheel=0.46.3-r0 \
+        python3=3.12.13-r0 \
+        yq-go=4.49.2-r5 \
     \
     && pip install -r /tmp/requirements.txt \
     \
@@ -55,13 +55,13 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Franck Nijhof <frenck@addons.community>" \
+    maintainer="Franck Nijhof <opensource@frenck.dev>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.vendor="Home Assistant Community Apps" \
+    org.opencontainers.image.authors="Franck Nijhof <opensource@frenck.dev>" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://addons.community" \
+    org.opencontainers.image.url="https://frenck.dev/home-assistant-apps" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
