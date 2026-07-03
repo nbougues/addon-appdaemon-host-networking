@@ -2,8 +2,8 @@
 name: AppDaemon
 version: dev
 slug: appdaemon
-description: Python Apps and Dashboard using AppDaemon 4.x for Home Assistant
-url: https://github.com/hassio-addons/app-appdaemon
+description: Python Apps and Dashboard using AppDaemon 4.x for Home Assistant (with DOcker host networking in order to provide public network services)
+url: https://github.com/hassio-addons/app-appdaemon-host-networking
 webui: http://[HOST]:[PORT:5050]
 arch:
   - aarch64
