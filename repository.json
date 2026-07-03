@@ -1,5 +1,5 @@
 {
-  "name": "AppDaemon Custom Add-on",
-  "url": "https://github.com/nbougues/addon-appdaemon",
+  "name": "AppDaemon Custom Add-on with host networking",
+  "url": "https://github.com/nbougues/addon-appdaemon-host-networking",
   "maintainer": "Nicolas Bougues <nicolas@bougues.net>"
 }
